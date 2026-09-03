@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Service Request Operations — Interactive Demo",
+  title: "How I Work — Operational AI Workflow Sprint",
   description:
-    "Clickable demo of a facility service request workflow: intake, extraction, categorization, priority, exceptions, notification, and dashboard.",
+    "Kyle Kane's eight-step method for turning messy operational processes into working systems: Diagnose, Map, Design, Build, Test, Handle Exceptions, Document, Handoff.",
 };
 
 const METHOD_STEPS = [
