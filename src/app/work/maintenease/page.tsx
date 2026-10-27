@@ -4,7 +4,7 @@ import { CaseStudySection } from "@/components/CaseStudySection";
 import { UIFrame } from "@/components/UIFrame";
 
 export const metadata: Metadata = {
-  title: "MaintenEase — CMMS for Small Maintenance Teams",
+  title: "MaintenEase: CMMS for Small Maintenance Teams",
   description:
     "A live CMMS I built: work orders, assets, PM schedules, inspections, public request portal, and AI assistant with confirmation gates. Early-stage, honest.",
 };
@@ -67,15 +67,15 @@ export default function MaintenEasePage() {
           <p className="mt-6 text-lg text-ink-2 max-w-2xl leading-relaxed">
             I built a CMMS for teams that maintain assets, buildings, and fleets.
             Work orders, preventive maintenance, inspections, a public request
-            portal, and an AI assistant that reads real work-order data — with a
+            portal, and an AI assistant that reads real work-order data: with a
             confirmation gate on every action. Live at{" "}
             <a href="https://maintenease.com" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">
               maintenease.com
             </a>.
           </p>
           <p className="mt-4 text-sm text-ink-3 max-w-2xl">
-            MaintenEase is a live product in early stage — I am working with the
-            earliest teams. Published pricing is on the site; I am not claiming
+            MaintenEase is a live product in early stage: I am working with the
+            earliest teams. I am not claiming
             customer counts, ROI, or downtime savings.
           </p>
           <nav className="mt-8 flex flex-wrap gap-2">
@@ -97,7 +97,7 @@ export default function MaintenEasePage() {
 
       <CaseStudySection id="problem" title="Problem">
         <p>
-          Small maintenance teams — facilities, fleet, building ops — run on
+          Small maintenance teams: facilities, fleet, building ops, run on
           clipboards, email chains, and shared spreadsheets. A tenant reports a
           leak. A technician gets a text. The work order lives in someone&apos;s
           inbox. PM schedules slip because there is no system generating them.
@@ -106,7 +106,7 @@ export default function MaintenEasePage() {
         <p>
           Enterprise CMMS tools exist but price per seat, require implementation
           projects, and overwhelm a 4-person team. The team needs work orders,
-          assets, PM schedules, and a way for occupants to report problems —
+          assets, PM schedules, and a way for occupants to report problems,
           without a six-month rollout.
         </p>
       </CaseStudySection>
@@ -133,7 +133,7 @@ export default function MaintenEasePage() {
         }
       >
         <p>
-          Before building, I mapped how a 4–8 person maintenance team actually
+          Before building, I mapped how a 4-8 person maintenance team actually
           operates. Requests arrive through phone, text, and email with inconsistent
           detail. A coordinator triages from memory. Technicians carry paper
           checklists or nothing. PM work is reactive because schedules are not
@@ -153,9 +153,9 @@ export default function MaintenEasePage() {
           <UIFrame title="Work order queue" subtitle="Live product UI" badge="Live" badgeTone="accent">
             <div className="space-y-0 divide-y divide-hairline">
               {[
-                { title: "HVAC not cooling — Warehouse 2", priority: "High", status: "In progress", assignee: "J. Martinez" },
+                { title: "HVAC not cooling: Warehouse 2", priority: "High", status: "In progress", assignee: "J. Martinez" },
                 { title: "Dock 4 door sensor fault", priority: "Normal", status: "Open", assignee: "Unassigned" },
-                { title: "Monthly PM — Compressor #3", priority: "Scheduled", status: "Open", assignee: "R. Chen" },
+                { title: "Monthly PM: Compressor #3", priority: "Scheduled", status: "Open", assignee: "R. Chen" },
               ].map((wo) => (
                 <div key={wo.title} className="flex items-center gap-3 py-2.5">
                   <div className="flex-1 min-w-0">
@@ -175,19 +175,17 @@ export default function MaintenEasePage() {
           MaintenEase is a full CMMS I designed and shipped:
         </p>
         <ul className="mt-4 space-y-2 text-ink-2">
-          <li><strong className="text-ink">Work orders</strong> — create, assign, prioritize, close; mobile-friendly execution</li>
-          <li><strong className="text-ink">Assets</strong> — history, documents, photos attached to equipment records</li>
-          <li><strong className="text-ink">PM schedules</strong> — recurring maintenance that auto-generates work orders</li>
-          <li><strong className="text-ink">Inspections and checklists</strong> — structured completion with evidence</li>
-          <li><strong className="text-ink">Vendors</strong> — service partner records linked to assets and work</li>
-          <li><strong className="text-ink">Public request portal</strong> — branded link at maintenease.com/r/your-name; no login required for submitters</li>
-          <li><strong className="text-ink">AI maintenance assistant</strong> — reads real work-order and asset data; confirmation gate on every write action</li>
-          <li><strong className="text-ink">Predictive/risk scoring</strong> — on Pro and Business tiers</li>
-          <li><strong className="text-ink">MCP/agent API</strong> — for automation integrations</li>
+          <li><strong className="text-ink">Work orders</strong>: create, assign, prioritize, close; mobile-friendly execution</li>
+          <li><strong className="text-ink">Assets</strong>: history, documents, photos attached to equipment records</li>
+          <li><strong className="text-ink">PM schedules</strong>: recurring maintenance that auto-generates work orders</li>
+          <li><strong className="text-ink">Inspections and checklists</strong>: structured completion with evidence</li>
+          <li><strong className="text-ink">Vendors</strong>: service partner records linked to assets and work</li>
+          <li><strong className="text-ink">Public request portal</strong>: branded link at maintenease.com/r/your-name; no login required for submitters</li>
+          <li><strong className="text-ink">AI maintenance assistant</strong>: reads real work-order and asset data; confirmation gate on every write action</li>
+          <li><strong className="text-ink">Predictive/risk scoring</strong>: on Pro and Business tiers</li>
+          <li><strong className="text-ink">MCP/agent API</strong>: for automation integrations</li>
         </ul>
         <p className="mt-4">
-          Published pricing: Starter $49/mo (2 seats), Pro $129/mo (4 seats),
-          Business $299/mo (4 seats + $15/seat). Free onboarding and data import.
         </p>
       </CaseStudySection>
 
@@ -234,12 +232,12 @@ export default function MaintenEasePage() {
         <p>
           <strong className="text-ink">PM generation.</strong> Recurring schedules
           auto-create work orders on interval. Technicians see them in the queue
-          alongside reactive work — same history, same asset record.
+          alongside reactive work: same history, same asset record.
         </p>
         <p>
           <strong className="text-ink">AI assistant.</strong> Reads real work-order
           and asset data. Can summarize open work, look up asset history, and
-          propose actions — but every write requires explicit human confirmation.
+          propose actions: but every write requires explicit human confirmation.
           No silent database changes.
         </p>
       </CaseStudySection>
@@ -248,12 +246,12 @@ export default function MaintenEasePage() {
         id="exceptions"
         title="Exceptions"
         visual={
-          <UIFrame title="Request inbox — needs review" subtitle="Before work order creation" badge="Triage" badgeTone="flag">
+          <UIFrame title="Request inbox: needs review" subtitle="Before work order creation" badge="Triage" badgeTone="flag">
             <div className="space-y-2">
               {[
-                { issue: "Missing asset association", req: "Leak — break room B", action: "Confirm asset or location" },
-                { issue: "Duplicate submission", req: "HVAC not cooling — Warehouse 2", action: "Merge with WO #1042" },
-                { issue: "Urgent flag — verify", req: "Elevator stuck — Floor 3", action: "Confirm before auto-notify" },
+                { issue: "Missing asset association", req: "Leak: break room B", action: "Confirm asset or location" },
+                { issue: "Duplicate submission", req: "HVAC not cooling: Warehouse 2", action: "Merge with WO #1042" },
+                { issue: "Urgent flag: verify", req: "Elevator stuck: Floor 3", action: "Confirm before auto-notify" },
               ].map((ex) => (
                 <div key={ex.issue} className="p-2.5 rounded-lg border border-hairline">
                   <p className="text-[0.625rem] font-semibold uppercase tracking-wider text-flag">{ex.issue}</p>
@@ -266,14 +264,14 @@ export default function MaintenEasePage() {
         }
       >
         <p>
-          Public portals create exception volume by design — that is the point.
+          Public portals create exception volume by design: that is the point.
           Not every submission becomes a work order immediately:
         </p>
         <ul className="mt-4 space-y-2 text-ink-2">
-          <li><strong className="text-ink">Missing asset or location</strong> — request enters inbox; coordinator confirms before assignment</li>
-          <li><strong className="text-ink">Duplicate reports</strong> — same issue submitted twice; merge before creating redundant work orders</li>
-          <li><strong className="text-ink">Urgent flag abuse</strong> — urgent triggers immediate notification; coordinator can verify before escalation</li>
-          <li><strong className="text-ink">AI-proposed actions</strong> — assistant suggests work-order creation or status change; human must confirm</li>
+          <li><strong className="text-ink">Missing asset or location</strong>: request enters inbox; coordinator confirms before assignment</li>
+          <li><strong className="text-ink">Duplicate reports</strong>: same issue submitted twice; merge before creating redundant work orders</li>
+          <li><strong className="text-ink">Urgent flag abuse</strong>: urgent triggers immediate notification; coordinator can verify before escalation</li>
+          <li><strong className="text-ink">AI-proposed actions</strong>: assistant suggests work-order creation or status change; human must confirm</li>
         </ul>
         <p>
           QR code submissions usually enter the request inbox first so maintenance
@@ -284,24 +282,19 @@ export default function MaintenEasePage() {
 
       <CaseStudySection id="result" title="Result">
         <p>
-          MaintenEase is a live product with published pricing at{" "}
+          MaintenEase is a live product at{" "}
           <a href="https://maintenease.com" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">
             maintenease.com
           </a>.
           The marketing site describes the product as brand-new and working with
-          the earliest teams — that is accurate. I am not inventing rollout size,
+          the earliest teams: that is accurate. I am not inventing rollout size,
           customer counts, or downtime-dollar ROI.
         </p>
         <p>
-          What this case study proves: I understand real maintenance operations —
+          What this case study proves: I understand real maintenance operations,
           work orders, PM schedules, asset history, occupant intake, mobile
-          execution — and I shipped a working system with exception paths and
+          execution, and I shipped a working system with exception paths and
           human controls, not a feature checklist demo.
-        </p>
-        <p>
-          Starter is $49/month with 2 included seats. Pro is $129/month with 4
-          seats. Business is $299/month with 4 seats and additional seats at
-          $15/month. Free data import and onboarding are included on every plan.
         </p>
       </CaseStudySection>
 
@@ -310,7 +303,7 @@ export default function MaintenEasePage() {
           {[
             { layer: "Frontend", choice: "Vite + React 18 + TypeScript", why: "SPA with route-level code splitting; mobile-friendly work-order execution" },
             { layer: "Backend", choice: "Supabase", why: "Postgres, auth, storage, edge functions; RLS policies per company" },
-            { layer: "State", choice: "TanStack Query", why: "Server state via domain services and hooks — no direct DB calls in components" },
+            { layer: "State", choice: "TanStack Query", why: "Server state via domain services and hooks: no direct DB calls in components" },
             { layer: "UI", choice: "shadcn/ui + Tailwind CSS", why: "Consistent operational UI across work orders, assets, and portal" },
             { layer: "Monitoring", choice: "Sentry", why: "Client error tracking with route and session context" },
             { layer: "AI", choice: "Assistant + MCP API", why: "Reads real WO/asset data; confirmation gate on writes" },
@@ -328,17 +321,12 @@ export default function MaintenEasePage() {
         <p>
           <strong className="text-ink">The request portal is distribution.</strong>{" "}
           Every account gets a free public link. Occupants report problems without
-          friction. The inbox is where exceptions live — not the work-order queue.
+          friction. The inbox is where exceptions live: not the work-order queue.
         </p>
         <p>
           <strong className="text-ink">AI needs a confirmation gate.</strong>{" "}
           An assistant that reads real maintenance data is useful. One that writes
           without asking destroys trust. Every proposed action waits for a human.
-        </p>
-        <p>
-          <strong className="text-ink">Flat account pricing matches the buyer.</strong>{" "}
-          Small teams do not think in per-seat math. Starter at $49 with 2 seats
-          is easier to evaluate than $25/user × 4.
         </p>
         <p>
           <strong className="text-ink">Ship the inbox before the AI.</strong>{" "}

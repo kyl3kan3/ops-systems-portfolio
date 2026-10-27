@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How I Work — Operational AI Workflow Sprint",
+  title: "How I Work: Operational AI Workflow Sprint",
   description:
     "Kyle Kane's eight-step method for turning messy operational processes into working systems: Diagnose, Map, Design, Build, Test, Handle Exceptions, Document, Handoff.",
 };
 
 const METHOD_STEPS = [
-  { step: "Diagnose", sentence: "I listen to how work actually moves — not the process diagram on the wall." },
+  { step: "Diagnose", sentence: "I listen to how work actually moves: not the process diagram on the wall." },
   { step: "Map", sentence: "I document every handoff, exception, and place where information gets lost." },
   { step: "Design", sentence: "I specify intake, routing, human controls, and the exception queue before writing code." },
-  { step: "Build", sentence: "I ship the workflow with real operational UI — not a chatbot wrapper." },
+  { step: "Build", sentence: "I ship the workflow with real operational UI: not a chatbot wrapper." },
   { step: "Test", sentence: "I run it against real scenarios, including the ones that break." },
-  { step: "Handle Exceptions", sentence: "I design what happens when data is missing, ambiguous, or wrong — before go-live." },
+  { step: "Handle Exceptions", sentence: "I design what happens when data is missing, ambiguous, or wrong: before go-live." },
   { step: "Document", sentence: "I leave runbooks your team can follow without me in the room." },
   { step: "Handoff", sentence: "I transfer ownership with evidence, not a slide deck." },
 ];
@@ -38,12 +38,12 @@ export default function HowIWorkPage() {
         <div className="mx-auto max-w-5xl px-5 py-12 md:px-8 md:py-16">
           <p className="label-caps mb-3">How I Work</p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl text-ink leading-tight max-w-3xl">
-            Operational AI Workflow Sprint™
+            Operational AI Workflow Sprint
           </h1>
           <p className="mt-6 text-lg text-ink-2 max-w-2xl leading-relaxed">
             I take one messy operational workflow and turn it into a working system
-            — with an exception path, human controls, and a clean handoff. Typical
-            scope: 1–2 weeks.
+           : with an exception path, human controls, and a clean handoff. Typical
+            scope: 1-2 weeks.
           </p>
         </div>
       </header>
@@ -76,20 +76,14 @@ export default function HowIWorkPage() {
           <h2 className="text-2xl md:text-3xl text-ink mb-6">What you get</h2>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-xl border border-hairline bg-card p-6">
-              <h3 className="font-serif text-lg font-semibold text-ink">Operational AI Workflow Sprint™</h3>
+              <h3 className="font-serif text-lg font-semibold text-ink">Operational AI Workflow Sprint</h3>
               <ul className="mt-4 space-y-2 text-sm text-ink-2">
-                <li>1 operational workflow — intake through handoff</li>
+                <li>1 operational workflow: intake through handoff</li>
                 <li>Exception path designed and built</li>
                 <li>Operational UI your team can run</li>
                 <li>Documentation and handoff session</li>
-                <li>Typical timeline: 1–2 weeks</li>
+                <li>Typical timeline: 1-2 weeks</li>
               </ul>
-              <p className="mt-6 text-sm">
-                <span className="label-caps">Starting price</span>
-                <br />
-                <span className="text-ink font-medium">On request</span>
-                {/* TODO_STARTING_PRICE */}
-              </p>
             </div>
             <div className="space-y-6">
               <div>
@@ -116,7 +110,7 @@ export default function HowIWorkPage() {
           </div>
           <p className="mt-8 text-sm text-ink-3 max-w-2xl">
             Versioned operating designs that connect evidence, system behavior,
-            human controls, security, and measurable outcomes — not a slide deck
+            human controls, security, and measurable outcomes: not a slide deck
             about AI potential.
           </p>
         </div>
@@ -143,7 +137,7 @@ export default function HowIWorkPage() {
           <p className="label-caps mb-2">See the deliverable</p>
           <h2 className="text-xl text-ink mb-4">Service request operations demo</h2>
           <p className="text-ink-2 mb-4 max-w-2xl">
-            The sprint produces systems like this — click through a facility request
+            The sprint produces systems like this: click through a facility request
             from submission to dashboard.
           </p>
           <Link href="/work/service-request" className="text-accent hover:underline text-sm font-medium">

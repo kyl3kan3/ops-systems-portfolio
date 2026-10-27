@@ -34,7 +34,7 @@ const STEPS: StepConfig[] = [
 ];
 
 const SAMPLE_REQUEST = {
-  submitter: "Night shift lead — Dock 4",
+  submitter: "Night shift lead: Dock 4",
   text: "HVAC not cooling in Warehouse 2. Temperature rising, product at risk. Dock 4 area worst affected. Started around 11 PM.",
   location: "Warehouse 2 · Dock 4",
   contact: "nightlead@facility.example",
@@ -73,7 +73,7 @@ export function ServiceRequestDemo() {
       {/* Demo banner */}
       <div className="bg-accent/10 border-b border-hairline px-4 py-2.5 flex items-center justify-between gap-3">
         <p className="text-xs text-accent font-medium">
-          Demo — Operational AI Workflow Sprint™ deliverable (sample data, no backend)
+          Demo: Operational AI Workflow Sprint deliverable (sample data, no backend)
         </p>
         <button
           type="button"
@@ -195,11 +195,11 @@ function StepContent({ step }: { step: DemoStep }) {
                   ["location", "Warehouse 2, Dock 4", "0.94"],
                   ["urgency_signal", "product at risk", "0.88"],
                   ["time_reported", "~11:00 PM", "0.72"],
-                  ["equipment_id", "—", "0.00"],
+                  ["equipment_id", "-", "0.00"],
                 ].map(([field, value, conf]) => (
                   <tr key={field} className="border-b border-hairline last:border-0">
                     <td className="px-3 py-2 text-ink-2 font-sans">{field}</td>
-                    <td className={`px-3 py-2 ${value === "—" ? "text-red" : "text-ink"}`}>{value}</td>
+                    <td className={`px-3 py-2 ${value === "-" ? "text-red" : "text-ink"}`}>{value}</td>
                     <td className={`px-3 py-2 text-right ${Number(conf) < 0.8 ? "text-flag" : "text-accent"}`}>{conf}</td>
                   </tr>
                 ))}
@@ -214,7 +214,7 @@ function StepContent({ step }: { step: DemoStep }) {
         <div className="space-y-4">
           <p className="text-sm text-ink-2">
             Request is routed to the correct operational category based on extracted
-            signals — not a generic &quot;other&quot; bucket.
+            signals: not a generic &quot;other&quot; bucket.
           </p>
           <div className="flex flex-wrap gap-2">
             {["Facilities", "HVAC", "Warehouse", "Environmental"].map((tag, i) => (
@@ -241,7 +241,7 @@ function StepContent({ step }: { step: DemoStep }) {
       return (
         <div className="space-y-4">
           <p className="text-sm text-ink-2">
-            Priority is assessed from urgency signals, category, and time of day —
+            Priority is assessed from urgency signals, category, and time of day,
             not left for the submitter to guess.
           </p>
           <div className="rounded-lg border border-red/30 bg-red-light p-4">
@@ -253,7 +253,7 @@ function StepContent({ step }: { step: DemoStep }) {
             <ul className="mt-3 space-y-1.5 text-sm text-ink-2">
               <li>→ &quot;product at risk&quot; urgency signal detected</li>
               <li>→ HVAC failure in temperature-controlled warehouse</li>
-              <li>→ Night submission — on-call path applies</li>
+              <li>→ Night submission: on-call path applies</li>
             </ul>
           </div>
         </div>
@@ -270,12 +270,12 @@ function StepContent({ step }: { step: DemoStep }) {
             <p className="text-sm font-semibold text-flag">Missing: Equipment ID</p>
             <p className="text-xs text-ink-2 mt-2">
               Warehouse 2 has 3 HVAC units. Submitter did not specify which unit.
-              Auto-creation blocked — human must associate asset before assignment.
+              Auto-creation blocked: human must associate asset before assignment.
             </p>
             <div className="mt-3 space-y-1 text-xs font-mono text-ink-3">
-              <p>W2-HVAC-01 — Rooftop unit, north end</p>
-              <p>W2-HVAC-02 — Rooftop unit, dock side</p>
-              <p>W2-HVAC-03 — Split system, office wing</p>
+              <p>W2-HVAC-01: Rooftop unit, north end</p>
+              <p>W2-HVAC-02, Rooftop unit, dock side</p>
+              <p>W2-HVAC-03, Split system, office wing</p>
             </div>
           </div>
         </div>
@@ -293,7 +293,7 @@ function StepContent({ step }: { step: DemoStep }) {
               <span className="label-caps">Record</span>
               <span className="font-mono text-xs text-accent">SR-2026-0341</span>
             </div>
-            <p className="font-medium text-ink">HVAC not cooling — Warehouse 2, Dock 4</p>
+            <p className="font-medium text-ink">HVAC not cooling: Warehouse 2, Dock 4</p>
             <div className="grid grid-cols-2 gap-2 text-xs text-ink-2">
               <div><span className="text-ink-3">Asset:</span> W2-HVAC-02</div>
               <div><span className="text-ink-3">Priority:</span> High</div>
@@ -309,13 +309,13 @@ function StepContent({ step }: { step: DemoStep }) {
         <div className="space-y-4">
           <p className="text-sm text-ink-2">
             The right person is notified based on category, priority, and on-call
-            schedule — not a blast to everyone.
+            schedule: not a blast to everyone.
           </p>
           <div className="space-y-2">
             <div className="rounded-lg border border-hairline bg-paper p-3 text-sm flex items-start gap-3">
               <span className="text-accent text-lg">→</span>
               <div>
-                <p className="font-medium text-ink">R. Chen — HVAC technician (on-call)</p>
+                <p className="font-medium text-ink">R. Chen: HVAC technician (on-call)</p>
                 <p className="text-xs text-ink-3 mt-0.5">SMS + in-app · High priority path</p>
               </div>
             </div>
@@ -366,7 +366,7 @@ function StepContent({ step }: { step: DemoStep }) {
             <p className="text-xs text-ink-3 mt-1">SR-2026-0341 · Resolved by coordinator asset selection</p>
           </div>
           <p className="text-xs text-ink-3">
-            Exception queue shows all items needing human decision — not buried in a notification feed.
+            Exception queue shows all items needing human decision: not buried in a notification feed.
           </p>
         </div>
       );
@@ -393,9 +393,9 @@ function StepContent({ step }: { step: DemoStep }) {
           <div className="rounded-lg border border-hairline overflow-hidden text-xs">
             <div className="bg-paper px-3 py-2 border-b border-hairline label-caps">Recent records</div>
             {[
-              { id: "SR-2026-0341", title: "HVAC — Warehouse 2", status: "Assigned", priority: "High" },
-              { id: "SR-2026-0340", title: "Lighting — Dock 3", status: "Open", priority: "Normal" },
-              { id: "SR-2026-0339", title: "Door sensor — Dock 4", status: "In progress", priority: "Normal" },
+              { id: "SR-2026-0341", title: "HVAC: Warehouse 2", status: "Assigned", priority: "High" },
+              { id: "SR-2026-0340", title: "Lighting: Dock 3", status: "Open", priority: "Normal" },
+              { id: "SR-2026-0339", title: "Door sensor: Dock 4", status: "In progress", priority: "Normal" },
             ].map((row) => (
               <div key={row.id} className="flex items-center gap-2 px-3 py-2 border-b border-hairline last:border-0">
                 <span className="font-mono text-ink-3 w-24 shrink-0">{row.id}</span>
@@ -420,11 +420,11 @@ function StatePanel({
   completedSteps: Set<DemoStep>;
 }) {
   const fields = [
-    { key: "request_id", value: completedSteps.has("create") || step === "create" || completedSteps.has("notify") ? "SR-2026-0341" : "—" },
-    { key: "category", value: completedSteps.has("categorize") ? "HVAC / Facilities" : "—" },
-    { key: "priority", value: completedSteps.has("priority") ? "High" : "—" },
-    { key: "equipment_id", value: completedSteps.has("create") ? "W2-HVAC-02" : completedSteps.has("missing") ? "MISSING" : "—" },
-    { key: "assigned_to", value: completedSteps.has("notify") ? "R. Chen" : "—" },
+    { key: "request_id", value: completedSteps.has("create") || step === "create" || completedSteps.has("notify") ? "SR-2026-0341" : "-" },
+    { key: "category", value: completedSteps.has("categorize") ? "HVAC / Facilities" : "-" },
+    { key: "priority", value: completedSteps.has("priority") ? "High" : "-" },
+    { key: "equipment_id", value: completedSteps.has("create") ? "W2-HVAC-02" : completedSteps.has("missing") ? "MISSING" : "-" },
+    { key: "assigned_to", value: completedSteps.has("notify") ? "R. Chen" : "-" },
     { key: "ack_sent", value: completedSteps.has("acknowledge") ? "Yes" : "No" },
     { key: "exceptions", value: completedSteps.has("exception") ? "0 open (1 resolved)" : completedSteps.has("missing") ? "1 open" : "0" },
   ];
@@ -437,7 +437,7 @@ function StatePanel({
           <span className={`font-mono text-xs ${
             f.value === "MISSING" ? "text-flag" :
             f.value === "High" ? "text-red" :
-            f.value === "—" ? "text-ink-3" : "text-ink"
+            f.value === "-" ? "text-ink-3" : "text-ink"
           }`}>
             {f.value}
           </span>

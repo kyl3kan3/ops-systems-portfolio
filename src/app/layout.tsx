@@ -12,11 +12,11 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   title: {
-    default: "Kyle Kane — AI Operations Systems Builder",
+    default: "Kyle Kane: AI Operations Systems Builder",
     template: "%s | Kyle Kane",
   },
   description:
-    "I take messy operational processes and turn them into working systems — with exception paths, human controls, and clean handoff.",
+    "I take messy operational processes and turn them into working systems: with exception paths, human controls, and clean handoff.",
 };
 
 export default function RootLayout({

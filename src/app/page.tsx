@@ -7,15 +7,15 @@ const caseStudies = [
     subtitle: "Document intake → confidence-scored extraction → exception queue → close package",
     tag: "Workflow design",
     description:
-      "I designed a pre-accounting pipeline for solo operators — forward an invoice, photo a receipt, hand your accountant a clean monthly close. Matching logic, exception types, and close gate documented as a system design.",
+      "I designed a pre-accounting pipeline for solo operators: forward an invoice, photo a receipt, hand your accountant a clean monthly close. Matching logic, exception types, and close gate documented as a system design.",
   },
   {
     slug: "maintenease",
     title: "MaintenEase",
-    subtitle: "CMMS for small maintenance teams — live at maintenease.com",
+    subtitle: "CMMS for small maintenance teams: live at maintenease.com",
     tag: "Shipped product",
     description:
-      "Work orders, assets, PM schedules, inspections, public request portal, and an AI assistant with confirmation gates — built for real maintenance operations, not a demo.",
+      "Work orders, assets, PM schedules, inspections, public request portal, and an AI assistant with confirmation gates: built for real maintenance operations, not a demo.",
   },
   {
     slug: "service-request",
@@ -38,9 +38,9 @@ export default function HomePage() {
             I turn messy operational processes into working systems.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-ink-2 max-w-2xl leading-relaxed">
-            I&apos;m Kyle Kane — an AI operations systems builder. I don&apos;t install
-            chatbots or hand you strategy decks. I take a real workflow — intake,
-            exceptions, handoff — and ship something your team can run.
+            I&apos;m Kyle Kane: an AI operations systems builder. I don&apos;t install
+            chatbots or hand you strategy decks. I take a real workflow, intake,
+            exceptions, handoff, and ship something your team can run.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <Link
@@ -67,14 +67,14 @@ export default function HomePage() {
               <p className="label-caps mb-2">What I do</p>
               <p className="text-ink-2 leading-relaxed">
                 Map how work actually moves through your operation. Design the
-                system — intake, extraction, routing, exception queue, close.
+                system: intake, extraction, routing, exception queue, close.
                 Build it with human controls at every decision point.
               </p>
             </div>
             <div>
               <p className="label-caps mb-2">What I prove</p>
               <p className="text-ink-2 leading-relaxed">
-                Case studies below show designed workflows and shipped products —
+                Case studies below show designed workflows and shipped products,
                 not screenshots of someone else&apos;s app. Each one documents
                 problem, exceptions, and what the operator actually touches.
               </p>
@@ -128,7 +128,7 @@ export default function HomePage() {
             Have a messy process that needs a system?
           </h2>
           <p className="text-ink-2 max-w-lg mx-auto mb-8">
-            I run Operational AI Workflow Sprints — typically 1–2 weeks, one
+            I run Operational AI Workflow Sprints: typically 1-2 weeks, one
             operational workflow, exception path and handoff included.
           </p>
           <a

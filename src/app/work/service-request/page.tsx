@@ -4,7 +4,7 @@ import { CaseStudySection } from "@/components/CaseStudySection";
 import { ServiceRequestDemo } from "@/components/ServiceRequestDemo";
 
 export const metadata: Metadata = {
-  title: "Service Request Operations — Interactive Demo",
+  title: "Service Request Operations: Interactive Demo",
   description:
     "Clickable demo of facility request intake: extraction, categorization, priority, missing-info exceptions, notification, and dashboard.",
 };
@@ -19,8 +19,8 @@ export default function ServiceRequestPage() {
             Service request operations
           </h1>
           <p className="mt-6 text-lg text-ink-2 max-w-2xl leading-relaxed">
-            This is a demo of what an Operational AI Workflow Sprint™ delivers: a
-            clickable operational console built on local sample data — no auth, no
+            This is a demo of what an Operational AI Workflow Sprint delivers: a
+            clickable operational console built on local sample data: no auth, no
             database. Click through a facility request from submission to dashboard.
           </p>
           <p className="mt-4 text-sm text-ink-3">
@@ -42,7 +42,7 @@ export default function ServiceRequestPage() {
           Facility and operations teams receive service requests through phone,
           email, text, and walk-ups. Each channel produces different information
           quality. Urgent and routine requests look the same until someone reads
-          them. Missing details — which unit, which dock, which asset — only surface
+          them. Missing details: which unit, which dock, which asset, only surface
           after a technician is dispatched.
         </p>
         <p>
@@ -73,7 +73,7 @@ export default function ServiceRequestPage() {
           <li>Information extracted with per-field confidence</li>
           <li>Categorized by routing rules</li>
           <li>Priority assessed from urgency signals</li>
-          <li>Missing information identified — blocks auto-creation</li>
+          <li>Missing information identified: blocks auto-creation</li>
           <li>Record created after human resolves the gap</li>
           <li>Right person notified (on-call path for high priority)</li>
           <li>Acknowledgment sent to submitter</li>
@@ -82,7 +82,7 @@ export default function ServiceRequestPage() {
         </ol>
         <p className="mt-4">
           This mirrors the request desk pattern from my agency operations work and
-          the public request portal in MaintenEase — versioned operating designs
+          the public request portal in MaintenEase: versioned operating designs
           that connect evidence, system behavior, human controls, and measurable
           outcomes.
         </p>
@@ -96,7 +96,7 @@ export default function ServiceRequestPage() {
           is affected.
         </p>
         <p>
-          Priority still assesses as High — &quot;product at risk&quot; is an urgency
+          Priority still assesses as High: &quot;product at risk&quot; is an urgency
           signal. But record creation is blocked until a coordinator selects
           W2-HVAC-02 (dock side). Then notification, acknowledgment, and dashboard
           update in sequence.
@@ -106,7 +106,7 @@ export default function ServiceRequestPage() {
       <CaseStudySection id="exceptions" title="Exceptions">
         <p>
           Missing equipment ID is the designed exception in this demo. The system
-          does not guess which asset — it routes to the exception queue and waits.
+          does not guess which asset: it routes to the exception queue and waits.
           Other exception types the sprint would design for your operation:
         </p>
         <ul className="mt-4 space-y-2 text-ink-2">
@@ -119,8 +119,8 @@ export default function ServiceRequestPage() {
 
       <CaseStudySection id="result" title="Result">
         <p>
-          This demo is the sprint deliverable proof — not a production deployment.
-          It shows what your team would click through after a 1–2 week engagement:
+          This demo is the sprint deliverable proof: not a production deployment.
+          It shows what your team would click through after a 1-2 week engagement:
           intake, extraction, routing, exception handling, notification, and a
           dashboard they can run without me in the room.
         </p>
@@ -131,7 +131,7 @@ export default function ServiceRequestPage() {
           The demo runs entirely in the browser with local sample data. A production
           sprint deliverable would typically use Next.js, a database for records and
           audit logs, webhook or queue-based notification, and role-scoped access
-          — shaped by your existing stack.
+         : shaped by your existing stack.
         </p>
       </CaseStudySection>
 
@@ -142,12 +142,12 @@ export default function ServiceRequestPage() {
         </p>
         <p>
           <strong className="text-ink">Acknowledge immediately, resolve separately.</strong>{" "}
-          The submitter needs to know someone received it — even while the exception
+          The submitter needs to know someone received it: even while the exception
           is still open.
         </p>
         <p>
           <strong className="text-ink">Operations consoles beat chatbot UIs.</strong>{" "}
-          Coordinators need state panels, exception queues, and audit trails — not a
+          Coordinators need state panels, exception queues, and audit trails: not a
           conversation thread.
         </p>
       </CaseStudySection>

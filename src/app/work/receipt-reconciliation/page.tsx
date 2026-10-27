@@ -5,9 +5,9 @@ import { UIFrame } from "@/components/UIFrame";
 import { ReceiptWorkflowDiagram } from "@/components/diagrams/ReceiptWorkflowDiagram";
 
 export const metadata: Metadata = {
-  title: "Receipt Reconciliation — Document Intake to Close Package",
+  title: "Receipt Reconciliation: Document Intake to Close Package",
   description:
-    "How I designed a pre-accounting workflow: document intake, confidence-scored extraction, matching logic, exception queue, and monthly close package — without silent guesses.",
+    "How I designed a pre-accounting workflow: document intake, confidence-scored extraction, matching logic, exception queue, and monthly close package: without silent guesses.",
 };
 
 const sections = [
@@ -32,7 +32,7 @@ export default function ReceiptReconciliationPage() {
             Receipt reconciliation: from shoebox to close package
           </h1>
           <p className="mt-6 text-lg text-ink-2 max-w-2xl leading-relaxed">
-            I designed LedgerLens as a pre-accounting pipeline for solo operators —
+            I designed LedgerLens as a pre-accounting pipeline for solo operators,
             forward an invoice, photo a receipt, hand your accountant a clean monthly
             close package. This case study documents the operational system I mapped
             and built toward: intake, extraction with confidence flags, matching and
@@ -40,7 +40,7 @@ export default function ReceiptReconciliationPage() {
           </p>
           <p className="mt-4 text-sm text-ink-3 max-w-2xl">
             This is a workflow case study of the designed system. MVP features remain
-            in development — I am not claiming a live production customer or shipped
+            in development: I am not claiming a live production customer or shipped
             bank-feed matching (cut from v1).
           </p>
           <nav className="mt-8 flex flex-wrap gap-2">
@@ -68,7 +68,7 @@ export default function ReceiptReconciliationPage() {
       {/* Problem */}
       <CaseStudySection id="problem" title="Problem">
         <p>
-          Solo operators — plumbers, freelancers, Etsy sellers, one-truck landscapers —
+          Solo operators: plumbers, freelancers, Etsy sellers, one-truck landscapers,
           run the same broken pipeline. Receipts pile up in a glovebox. Invoices rot
           in an email folder. Every January the whole mess gets dumped on an accountant
           who charges a cleanup fee to reconstruct twelve months of history from
@@ -79,12 +79,12 @@ export default function ReceiptReconciliationPage() {
           Wave exist and they still do not use them, because those tools ask for a
           bookkeeper&apos;s workflow: chart of accounts, reconciliation screens,
           double-entry concepts. What the operator actually does is <em>receive
-          documents</em> — a receipt at the counter, an invoice in the inbox. What the
+          documents</em>, a receipt at the counter, an invoice in the inbox. What the
           accountant actually needs is <em>those documents, categorized, totaled, and
           exportable</em>. Everything between those two facts is ceremony.
         </p>
         <p>
-          The real failure mode is not missing software — it is silent guesses. A wrong
+          The real failure mode is not missing software, it is silent guesses. A wrong
           total in a tax export is worse than no product. Competitors write wrong numbers
           into the ledger and the accountant finds them in March.
         </p>
@@ -106,7 +106,7 @@ export default function ReceiptReconciliationPage() {
                 <div>
                   <p className="font-medium text-ink">Capture is ad hoc</p>
                   <p className="text-ink-3 text-xs mt-0.5">
-                    Glovebox, email folder, phone camera roll — no single inbox
+                    Glovebox, email folder, phone camera roll: no single inbox
                   </p>
                 </div>
               </div>
@@ -115,7 +115,7 @@ export default function ReceiptReconciliationPage() {
                 <div>
                   <p className="font-medium text-ink">Categories are guesses</p>
                   <p className="text-ink-3 text-xs mt-0.5">
-                    Operator picks &quot;Meals&quot; when it was &quot;Fuel&quot; — no vendor memory
+                    Operator picks &quot;Meals&quot; when it was &quot;Fuel&quot;: no vendor memory
                   </p>
                 </div>
               </div>
@@ -143,8 +143,8 @@ export default function ReceiptReconciliationPage() {
       >
         <p>
           Before any system design, I mapped what actually happens. The operator
-          receives documents through three channels — email forward, phone photo,
-          occasional upload — and does nothing with them until tax season panic.
+          receives documents through three channels: email forward, phone photo,
+          occasional upload, and does nothing with them until tax season panic.
         </p>
         <p>
           The accountant receives a shoebox or a folder of PDFs with no structure.
@@ -166,7 +166,7 @@ export default function ReceiptReconciliationPage() {
         visual={
           <UIFrame
             title="Document inbox"
-            subtitle="Designed UI — extraction in progress"
+            subtitle="Designed UI: extraction in progress"
             badge="Designed"
             badgeTone="accent"
           >
@@ -175,7 +175,7 @@ export default function ReceiptReconciliationPage() {
                 { vendor: "Home Depot", amount: "$47.82", status: "confirmed", source: "photo · Mar 12" },
                 { vendor: "Shell #4821", amount: "$62.15", status: "review", source: "forwarded · Mar 11" },
                 { vendor: "Adobe", amount: "$54.99", status: "confirmed", source: "forwarded · Mar 10" },
-                { vendor: "Unknown vendor", amount: "$—", status: "extracting", source: "photo · Mar 10" },
+                { vendor: "Unknown vendor", amount: "$ -", status: "extracting", source: "photo · Mar 10" },
               ].map((row) => (
                 <div key={row.vendor} className="flex items-center gap-3 py-2.5">
                   <span
@@ -202,7 +202,7 @@ export default function ReceiptReconciliationPage() {
         }
       >
         <p>
-          I designed LedgerLens as a narrow pipeline — not accounting software, loudly.
+          I designed LedgerLens as a narrow pipeline: not accounting software, loudly.
           No chart of accounts, no reconciliation screens, no double entry. The
           artifact is a monthly close package: PDF summary, CSV in QBO- and
           Xero-importable formats, and a ZIP of source images.
@@ -213,28 +213,28 @@ export default function ReceiptReconciliationPage() {
         <ul className="mt-4 space-y-2 text-ink-2 text-[1.0625rem]">
           <li className="flex gap-2">
             <span className="text-accent font-semibold shrink-0">1.</span>
-            <span><strong className="text-ink">Intake</strong> — per-org forwarding address, mobile photo capture, content-hash deduplication</span>
+            <span><strong className="text-ink">Intake</strong>: per-org forwarding address, mobile photo capture, content-hash deduplication</span>
           </li>
           <li className="flex gap-2">
             <span className="text-accent font-semibold shrink-0">2.</span>
-            <span><strong className="text-ink">Extraction</strong> — vendor, date, total, tax, category; every field carries a confidence score</span>
+            <span><strong className="text-ink">Extraction</strong>: vendor, date, total, tax, category; every field carries a confidence score</span>
           </li>
           <li className="flex gap-2">
             <span className="text-accent font-semibold shrink-0">3.</span>
-            <span><strong className="text-ink">Match + review</strong> — amount, date window, normalized vendor; auto-confirm only above a conservative threshold</span>
+            <span><strong className="text-ink">Match + review</strong>: amount, date window, normalized vendor; auto-confirm only above a conservative threshold</span>
           </li>
           <li className="flex gap-2">
             <span className="text-accent font-semibold shrink-0">4.</span>
-            <span><strong className="text-ink">Exception queue</strong> — humans decide on mismatches, ambiguity, duplicates, and gaps</span>
+            <span><strong className="text-ink">Exception queue</strong>: humans decide on mismatches, ambiguity, duplicates, and gaps</span>
           </li>
           <li className="flex gap-2">
             <span className="text-accent font-semibold shrink-0">5.</span>
-            <span><strong className="text-ink">Close package</strong> — blocked until review queue is clean; accountant gets a share link</span>
+            <span><strong className="text-ink">Close package</strong>: blocked until review queue is clean; accountant gets a share link</span>
           </li>
         </ul>
         <p className="mt-4">
-          I also scoped ParseFlow as the developer-facing extraction API layer —
-          document in, structured JSON with per-field confidence out — for teams
+          I also scoped ParseFlow as the developer-facing extraction API layer,
+          document in, structured JSON with per-field confidence out: for teams
           that need the parsing primitive without the full close workflow.
         </p>
       </CaseStudySection>
@@ -246,7 +246,7 @@ export default function ReceiptReconciliationPage() {
         visual={
           <UIFrame
             title="Review sheet"
-            subtitle="Low-confidence field flagged — provenance visible"
+            subtitle="Low-confidence field flagged: provenance visible"
             badge="Needs review"
             badgeTone="flag"
           >
@@ -266,7 +266,7 @@ export default function ReceiptReconciliationPage() {
                 <div className="border-l-2 border-flag pl-3">
                   <p className="label-caps">Total</p>
                   <p className="text-sm font-medium text-ink mt-1 font-mono">$62.15</p>
-                  <p className="text-xs text-flag font-mono">61% — tap to see source crop</p>
+                  <p className="text-xs text-flag font-mono">61%: tap to see source crop</p>
                 </div>
                 <div>
                   <p className="label-caps">Category</p>
@@ -299,7 +299,7 @@ export default function ReceiptReconciliationPage() {
         <p>
           <strong className="text-ink">Extraction.</strong> A worker calls the
           extraction model with a structured-output schema: vendor, doc type, date,
-          total, tax, currency, line summary — each with a confidence score. Fields
+          total, tax, currency, line summary: each with a confidence score. Fields
           at or above threshold auto-populate a line item draft. Fields below threshold
           create review items and flip the document to needs-review. Nothing below
           threshold ever reaches an export.
@@ -309,19 +309,19 @@ export default function ReceiptReconciliationPage() {
           on three axes: amount, date window, and normalized vendor name.
           Auto-confirm only fires above a conservative confidence threshold. The
           design also accounts for recurring vendors with no receipt (missing-document
-          gaps inferred from history) — but receipts-to-bank matching was explicitly
+          gaps inferred from history): but receipts-to-bank matching was explicitly
           cut from v1 and deferred to a later phase.
         </p>
         <p>
           <strong className="text-ink">Vendor rules.</strong> A category correction
           (&quot;this Shell station is Fuel, not Meals&quot;) upserts a vendor rule.
           Next month&apos;s identical receipt skips review. The product gets quieter
-          with use — that compounding quiet is retention.
+          with use: that compounding quiet is retention.
         </p>
         <p>
           <strong className="text-ink">Monthly close.</strong> On the 1st, a cron
           job attempts to close the prior month. It refuses if unresolved review
-          items exist — instead emailing &quot;3 items need review before your March
+          items exist: instead emailing &quot;3 items need review before your March
           close&quot; with a deep link. When clean, the job aggregates line items,
           renders a PDF cover (category totals, flagged list, missing-receipt gaps),
           writes QBO and Xero CSVs, zips with source images, and emails the operator.
@@ -348,7 +348,7 @@ export default function ReceiptReconciliationPage() {
                 { type: "Vendor ambiguity", doc: "AMZN Mktp · Mar 3", detail: "Matches 2 normalized vendors" },
                 { type: "Duplicate", doc: "Shell #4821 · Mar 2", detail: "Same vendor + amount + date as Mar 1 entry" },
                 { type: "Missing receipt", doc: "Adobe · recurring", detail: "Monthly vendor, no document for February" },
-                { type: "Low confidence", doc: "Unknown · Mar 1", detail: "Overall extraction below floor — retake prompt" },
+                { type: "Low confidence", doc: "Unknown · Mar 1", detail: "Overall extraction below floor: retake prompt" },
               ].map((ex) => (
                 <div
                   key={ex.type + ex.doc}
@@ -368,17 +368,17 @@ export default function ReceiptReconciliationPage() {
         }
       >
         <p>
-          Exceptions are not edge cases — they are the product. I designed six
+          Exceptions are not edge cases: they are the product. I designed six
           exception types that route to the review queue instead of silently
           writing bad data:
         </p>
         <ul className="mt-4 space-y-2 text-ink-2">
-          <li><strong className="text-ink">Amount mismatch</strong> — extracted total does not align with expected range or prior pattern</li>
-          <li><strong className="text-ink">Date window</strong> — receipt date falls outside the statement or close period</li>
-          <li><strong className="text-ink">Vendor ambiguity</strong> — normalized name matches multiple vendor records</li>
-          <li><strong className="text-ink">Duplicate</strong> — same vendor + amount + date window as an existing entry</li>
-          <li><strong className="text-ink">Recurring vendor, no receipt</strong> — vendor history shows monthly spend but no document arrived</li>
-          <li><strong className="text-ink">Unreadable / low confidence</strong> — overall extraction below floor; prompt retake rather than queue garbage</li>
+          <li><strong className="text-ink">Amount mismatch</strong>: extracted total does not align with expected range or prior pattern</li>
+          <li><strong className="text-ink">Date window</strong>: receipt date falls outside the statement or close period</li>
+          <li><strong className="text-ink">Vendor ambiguity</strong>: normalized name matches multiple vendor records</li>
+          <li><strong className="text-ink">Duplicate</strong>: same vendor + amount + date window as an existing entry</li>
+          <li><strong className="text-ink">Recurring vendor, no receipt</strong>: vendor history shows monthly spend but no document arrived</li>
+          <li><strong className="text-ink">Unreadable / low confidence</strong>: overall extraction below floor; prompt retake rather than queue garbage</li>
         </ul>
         <p>
           The close gate is deliberate: the package must be clean or not exist.
@@ -389,7 +389,7 @@ export default function ReceiptReconciliationPage() {
         <p>
           Corrections train vendor rules. One tap to accept, inline edit to correct.
           Batch confirms stagger so the operator sees progress without overwhelm.
-          Every export and share access is audit-logged — these are financial records.
+          Every export and share access is audit-logged: these are financial records.
         </p>
       </CaseStudySection>
 
@@ -400,7 +400,7 @@ export default function ReceiptReconciliationPage() {
         visual={
           <UIFrame
             title="March close package"
-            subtitle="Designed deliverable — accountant handoff"
+            subtitle="Designed deliverable: accountant handoff"
             badge="Close ready"
             badgeTone="accent"
           >
@@ -439,7 +439,7 @@ export default function ReceiptReconciliationPage() {
         }
       >
         <p>
-          The designed outcome is a monthly artifact the accountant actually wants —
+          The designed outcome is a monthly artifact the accountant actually wants,
           not a dashboard to visit. A PDF cover with category totals, a flagged-items
           list, missing-receipt gaps for recurring vendors, and importable CSVs plus
           source images in a single package.
@@ -447,7 +447,7 @@ export default function ReceiptReconciliationPage() {
         <p>
           This case study documents the operational system design and architecture
           I built toward. The MVP feature checklist in the project README remains
-          unchecked — auth, ingestion, extraction, review queue, close package, and
+          unchecked: auth, ingestion, extraction, review queue, close package, and
           billing are specified but not yet shipped as a production product.
         </p>
         <p>
@@ -455,7 +455,7 @@ export default function ReceiptReconciliationPage() {
           workflow, map the real operator behavior, design matching logic with
           conservative auto-confirm thresholds, build a human exception path that
           blocks bad exports, and specify a close deliverable that respects the
-          accountant handoff. The matching and exception design is the proof — not
+          accountant handoff. The matching and exception design is the proof, not
           a match-rate percentage or a named customer.
         </p>
       </CaseStudySection>
@@ -486,7 +486,7 @@ export default function ReceiptReconciliationPage() {
             {
               layer: "Queue + worker",
               choice: "BullMQ on Redis, standalone Node",
-              why: "Extraction is 2–20s per doc; needs retries, rate limits, dead-letter queue",
+              why: "Extraction is 2-20s per doc; needs retries, rate limits, dead-letter queue",
             },
             {
               layer: "Extraction",
@@ -516,7 +516,7 @@ export default function ReceiptReconciliationPage() {
         </div>
         <p className="mt-6">
           ParseFlow (the extraction API sibling) uses FastAPI, Celery, and the same
-          confidence-scored structured-output pattern — document in, JSON out,
+          confidence-scored structured-output pattern: document in, JSON out,
           per-field confidence, async webhooks for batch jobs.
         </p>
       </CaseStudySection>
@@ -526,7 +526,7 @@ export default function ReceiptReconciliationPage() {
         <p>
           <strong className="text-ink">Confidence is the product.</strong> Every
           extracted field shows its score; anything below threshold lands in review.
-          Competitors silently write wrong totals. Trust in the export is the brand —
+          Competitors silently write wrong totals. Trust in the export is the brand,
           not extraction speed or model name.
         </p>
         <p>
@@ -545,7 +545,7 @@ export default function ReceiptReconciliationPage() {
         <p>
           <strong className="text-ink">Vendor rules are retention.</strong> One
           correction becomes a permanent rule. Review volume drops month over month.
-          The product gets quieter with use — that is the right retention curve for
+          The product gets quieter with use: that is the right retention curve for
           an ops tool.
         </p>
         <p>
@@ -564,7 +564,7 @@ export default function ReceiptReconciliationPage() {
             Need this for your operation?
           </h2>
           <p className="text-ink-2 max-w-lg mx-auto mb-8">
-            I run Operational AI Workflow Sprints — one messy process, one working
+            I run Operational AI Workflow Sprints: one messy process, one working
             system, exception path included.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

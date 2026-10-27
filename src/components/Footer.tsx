@@ -9,7 +9,7 @@ export function Footer() {
             <p className="font-serif text-lg font-semibold text-ink">Kyle Kane</p>
             <p className="mt-1 text-sm text-ink-2">Columbia, Illinois</p>
             <p className="mt-3 text-sm text-ink-3 max-w-sm">
-              I build operational systems — intake, exceptions, handoff — not chatbot demos.
+              I build operational systems: intake, exceptions, handoff, not chatbot demos.
             </p>
           </div>
           <div className="flex flex-col gap-2 text-sm">
